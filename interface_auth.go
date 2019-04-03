@@ -20,8 +20,8 @@ type DiscoDoveAuthPlugin interface {
 
 	/* This will be called once when we load this plugin, if you feel compelled to set something up, perhaps a 
 	 * control/query/admin thread or something, then do it here in a controlled manner - similarly if 
-	 * you want to pool connections, etc....  We assume that each plugin can scale itself, we do not magic
-	 * to allow for scalaibility, so you might want some worker threads.
+	 * you want to pool connections, etc....  We assume that each plugin can scale itself, we do no magic
+	 * to allow for scalability, so you might want some worker threads.
 	 *
 	 * Each plugin is responsible for creating it's own syslog connection as *syslog.Writer has a mutex, and 
 	 * I don't want the auth threads to be blocking on writing to syslog - so you need to scale logging yourself.
